@@ -317,5 +317,7 @@
         document.getElementById('session-url').onkeydown = function (event) {
             if (event.key === 'Enter') go();
         };
+
+        document.getElementById("session-create-btn").click();
     });
 })();
