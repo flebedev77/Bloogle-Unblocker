@@ -3,13 +3,13 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="icon" type="image/png" href="/fav.png" />
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 
-    <title>Unblocker</title>
+    <title>Bloogle</title>
 </head>
 
 <body>
@@ -17,6 +17,7 @@
         <img src="logo.png" />
         <h1>Rammerhead Proxy</h1>
     </header>
+    <h3 class="bloogle"><img src="fav.png" width="50"/>Bloogle</h3>
     <div class="container mb-5">
         <p class="mb-3 font-weight-bold text-danger" id="error-text" style="display: none">Error: some text</p>
         <div class="input-group mb-2" id="password-wrapper" style="display: none">
@@ -26,14 +27,9 @@
             <input type="password" class="form-control" id="session-password"
                 placeholder="Password is given by host of this site.">
         </div>
-        <div class="input-group mb-2" id="seachbar-container">
-            <div class="input-group-prepend">
-                <span class="input-group-text">Enter URL</span>
-            </div>
+        <div class="input-group mb-2" id="searchbar-container">
             <input type="text" class="form-control" id="session-url" placeholder="https://www.google.com/">
-            <div class="input-group-append">
-                <button class="btn btn-success" id="session-go">Go!</button>
-            </div>
+            <button class="btn btn-success" id="session-go">Search<button>
         </div>
         <div class="input-group mb-4" id="hide">
             <div class="input-group-prepend">

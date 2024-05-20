@@ -44,16 +44,78 @@ table.table-bordered>tbody>tr>td {
 }
 
 body {
-  background: darkslateblue;
+  background: rgb(89, 71, 203);
 }
 
 #searchbar-container {
   display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #searchbar-container > input {
-  background: darkslategray;
-  border: 1px solid darkblue;
+  background: rgb(65, 65, 170);
+  color: white;
+  border: none;
+  border-bottom: 3px solid purple;
   outline: 2px solid transparent;  
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 25px;
+  font-family: sans-serif;
+  transition-property: outline-color;
+  transition-duration: 0.1s;
+}
 
+#searchbar-container > input::placeholder {
+  color: darkgray;
+}
+
+#searchbar-container > input:focus,
+#searchbar-container > input:hover {
+  outline-color: purple;
+  background: rgb(65, 65, 170);
+}
+
+#searchbar-container > button {
+  display: none;
+}
+
+#searchbar-container > #session-go {
+  display: block;
+  margin-left: 5px;
+  background: rgb(65, 65, 170);
+  border: none;
+  border-bottom: 3px solid purple;
+  outline: 2px solid transparent;
+  transition-property: outline-color;
+  color: white;
+  transition-duration: 0.1s;
+  font-weight: bolder;
+  font-size: 20px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  padding-inline: 10px;
+}
+
+#searchbar-container > #session-go:hover,
+#searchbar-container > #session-go:focus {
+  outline-color: purple;
+}
+
+.bloogle {
+  color: white;
+  font-weight: bold;
+  font-size: 30px !important;
+  text-align: center;
+  position: fixed;
+  text-transform: uppercase;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% - 100px));
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
