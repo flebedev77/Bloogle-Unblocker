@@ -13,6 +13,7 @@ module.exports = {
     port: 8080,
     crossDomainPort: 8081,
     publicDir: path.join(__dirname, '../public'), // set to null to disable
+    prod: true,
 
     // enable or disable multithreading
     enableWorkers,
@@ -25,7 +26,7 @@ module.exports = {
     // this function's return object will determine how the client url rewriting will work.
     // set them differently from bindingAddress and port if rammerhead is being served
     // from a reverse proxy.
-    getServerInfo: () => ({ hostname: 'localhost', port: 8080, crossDomainPort: 8081, protocol: 'http:' }),
+    getServerInfo: () => ({ hostname: 'bloogle.onrender.com', port: 8080, crossDomainPort: 8081, protocol: 'http:' }),
     // example of non-hard-coding the hostname header
     // getServerInfo: (req) => {
     //     return { hostname: new URL('http://' + req.headers.host).hostname, port: 443, crossDomainPort: 8443, protocol: 'https: };

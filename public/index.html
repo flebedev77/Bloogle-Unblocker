@@ -5,8 +5,20 @@
 <head>
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <meta name="google-signin-client_id"
+        content="397876265774-53tfeg4ek3bssqlti1s05o64nl7uus31.apps.googleusercontent.com">
     <link rel="icon" type="image/png" href="/fav.png" />
     <link rel="stylesheet" href="style.css">
+    <script>
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+        }
+    </script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="script.js"></script>
 
     <title>Bloogle</title>
@@ -17,7 +29,7 @@
         <img src="logo.png" />
         <h1>Rammerhead Proxy</h1>
     </header>
-    <h3 class="bloogle"><img src="fav.png" width="50"/>Bloogle</h3>
+    <h3 class="bloogle"><img src="fav.png" width="50" />Bloogle</h3>
     <div class="container mb-5">
         <p class="mb-3 font-weight-bold text-danger" id="error-text" style="display: none">Error: some text</p>
         <div class="input-group mb-2" id="password-wrapper" style="display: none">
@@ -67,6 +79,11 @@
             <tbody>
             </tbody>
         </table>
+    </div>
+
+    <div id="overlay">
+        <h1>Sign In</h1>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
     </div>
 </body>
 
